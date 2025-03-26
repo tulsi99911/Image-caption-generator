@@ -5,12 +5,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import load_img, img_to_array
 import matplotlib.pyplot as plt
 import pickle
-import gdown
 
-# Google Drive file ID 
-# Correct file ID
-file_id = "1GBuSJ2qI811bqLKRgl609Hi9zu0ouGlk"
-url = f"https://drive.google.com/uc?id={file_id}"
 
 # Function to generate and display caption
 def generate_and_display_caption(image_path, model_path, tokenizer_path, feature_extractor_path, max_length=34,img_size=224):
@@ -67,9 +62,8 @@ def main():
         # Paths for the saved models and tokenizer
         model_path = "model.keras"  # Replace with the actual path
         tokenizer_path = "tokenizer.pkl"  # Replace with the actual path
-        #feature_extractor_path = "fe.keras"  # Replace with the actual path
-        with open("fe.keras", "rb") as f:
-            feature_extractor_path = pickle.load(f)
+        feature_extractor_path = "fe.keras"  # Replace with the actual path
+
 
 
         # Generate caption and display image with caption
