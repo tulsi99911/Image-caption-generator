@@ -38,7 +38,8 @@ b) The sequences are padded to a fixed length.
 c) The image features and sequence inputs are fed into an LSTM-based Decoder.
 
 Step 4: Training the Model: 
-### python train.py
+python train.py
+
 ### Training includes:
 Using a custom Keras Sequence Data Generator, 
 EarlyStopping to prevent overfitting, 
@@ -52,3 +53,6 @@ Once the model is trained, you can run the Streamlit web app to generate caption
 1) Upload an image
 2) Automatically generate a caption using the trained model
 3) View the image with the generated caption displayed
+
+### Dataset:
+To train the model flickr 8k dataset from kaggle is being used
